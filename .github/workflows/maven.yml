@@ -51,6 +51,6 @@ jobs:
             -Dsonar.projectKey=zajaczkowski-fi_lab9_10
   
 permissions:
-  pull-requests: read # allows SonarQube to decorate PRs with analysis results
+  pull-requests: read
 
   
