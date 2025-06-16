@@ -9,6 +9,5 @@ public class App {
     }
 
     public void unusedMethod() {
-        // nothing here – DEAD CODE (code smell)
     }
 }
