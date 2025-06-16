@@ -38,5 +38,6 @@ jobs:
         mvn clean verify sonar:sonar \
           -Dsonar.projectKey=zajaczkowski-fi_lab9_10 \
           -Dsonar.organization=zajaczkowski-fi \
+          #33
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=$SONAR_TOKEN
