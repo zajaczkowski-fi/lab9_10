@@ -42,4 +42,4 @@ jobs:
       with:
         args: >
           -Dsonar.projectKey=zajaczkowski-fi_lab9_10
-          -Dsonar.organization=WAT
+          -Dsonar.organization=zajaczkowski-fi
