@@ -5,7 +5,7 @@ public class App {
         System.out.println("Hello, GitHub CI!");
     }
 
-    public void nic(){}
+    publi void nic(){}
 }
 
 
