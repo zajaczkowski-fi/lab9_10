@@ -1,13 +1,30 @@
-package com.example;
-
 public class App {
 
+    // hardcoded credential – S2068 (Security Hotspot)
+    private static final String SECRET_KEY = "12345-super-secret";
+
     public static void main(String[] args) {
-        String password = "admin123"; // hardcoded secret – SECURITY VULNERABILITY
-        System.out.println("Hello, GitHub CI!");
-        System.out.println("Password: " + password); // sensitive info logged
+        App app = new App();
+        app.dangerousMethod();
     }
 
-    public void unusedMethod() {
+    // empty catch block – S108 (Code Smell)
+    public void dangerousMethod() {
+        try {
+            int x = 1 / 0; // division by zero – Bug
+        } catch (Exception e) {
+            // ignoring exception
+        }
+    }
+
+    // duplicated code block
+    public void repeat() {
+        System.out.println("Repeat");
+        System.out.println("Repeat");
+        System.out.println("Repeat");
+    }
+
+    // unused method – S1149
+    public void unused() {
     }
 }
