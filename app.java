@@ -1,11 +1,14 @@
 package com.example;
 
 public class App {
+
     public static void main(String[] args) {
+        String password = "admin123"; // hardcoded secret – SECURITY VULNERABILITY
         System.out.println("Hello, GitHub CI!");
+        System.out.println("Password: " + password); // sensitive info logged
     }
 
-    publi void nic(){}
+    public void unusedMethod() {
+        // nothing here – DEAD CODE (code smell)
+    }
 }
-
-
