@@ -1,30 +1,26 @@
 public class App {
 
-    // hardcoded credential – S2068 (Security Hotspot)
-    private static final String SECRET_KEY = "12345-super-secret";
-
     public static void main(String[] args) {
         App app = new App();
-        app.dangerousMethod();
+        app.safeMethod();
+        app.printMessage("Repeat");
     }
 
-    // empty catch block – S108 (Code Smell)
-    public void dangerousMethod() {
+    public void safeMethod() {
         try {
-            int x = 1 / 0; // division by zero – Bug
+            int denominator = 2;
+            if (denominator != 0) {
+                int x = 10 / denominator;
+                System.out.println("Result: " + x);
+            }
         } catch (Exception e) {
-            // ignoring exception
+            System.err.println("Error during division: " + e.getMessage());
         }
     }
 
-    // duplicated code block
-    public void repeat() {
-        System.out.println("Repeat");
-        System.out.println("Repeat");
-        System.out.println("Repeat");
-    }
-
-    // unused method – S1149
-    public void unused() {
+    public void printMessage(String message) {
+        for (int i = 0; i < 3; i++) {
+            System.out.println(message);
+        }
     }
 }
